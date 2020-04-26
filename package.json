@@ -1,0 +1,31 @@
+{
+  "name": "graphql-recipe-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js --exec babel-node",
+    "build": "yarn clean && yarn build-app",
+    "build-app": "babel -d ./build ./src",
+    "clean": "yarn rimraf build && mkdir build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "apollo-server": "^2.12.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.0.0",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.7",
+    "sequelize-cli": "^5.5.1"
+  }
+}
